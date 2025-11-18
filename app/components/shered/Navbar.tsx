@@ -120,7 +120,7 @@ const Navbar = () => {
             href="/"
             className="text-sm md:text-xl text-orange-500 inline-flex navLogoStyle"
           >
-            Funlab<span className="text-white navLogoGlow">. movies</span>
+            FUNLAB<span className="text-white navLogoGlow">.entertainment</span>
           </Link>
         </div>
 
@@ -129,13 +129,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{desktopNav}</ul>
         </div>
 
-        <div className="navbar-end">
+        <div className="navbar-end hidden md:flex">
           <input
             type="text"
             name="search"
             id=""
             placeholder="Search..."
-            className="bg-[#272727]  px-4 pr-8 py-2 rounded-sm relative w-80 focus:outline-none focus:ring-0"
+            className="bg-[#272727]  px-4 pr-8 py-2 rounded-sm relative w-80 focus:outline-none focus:ring-0 "
           />
           <button className=" absolute top-8 right-4 cursor-pointer">
             <IoSearch size={20} />
@@ -159,7 +159,8 @@ const Navbar = () => {
             href="/"
             className="text-base text-orange-500 inline-flex navLogoStyle absolute top-7 left-4"
           >
-            Funlab<span className="text-white navLogoGlow">. movies</span>
+            FUNLAB
+            <span className="text-white navLogoGlow">. entertainment</span>
           </Link>
           <button
             className="absolute top-4 right-4 btn btn-ghost btn-circle"
@@ -181,13 +182,18 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <input
-            type="text"
-            name=""
-            id=""
-            className="bg-gray-500 mb-2 w-60 px-4 py-1 rounded-md  "
-            placeholder="Search..."
-          />
+          <div className="relative">
+            <input
+              type="text"
+              name=""
+              id=""
+              className="bg-gray-500 mb-2 w-60 px-4 py-1 rounded-md focus:outline-none focus:ring-0"
+              placeholder="Search..."
+            />
+            <button className=" absolute top-2 right-24 cursor-pointer">
+              <IoSearch size={16} />
+            </button>
+          </div>
 
           {/* Navigation Links */}
           <ul className="space-y-2 flex-1">{mobileNav}</ul>
